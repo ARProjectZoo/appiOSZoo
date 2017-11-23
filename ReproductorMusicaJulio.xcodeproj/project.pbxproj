@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1255601FC751D00014EBFF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12555F1FC751D00014EBFF /* Song.swift */; };
+		7F1255621FC754740014EBFF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1255611FC754740014EBFF /* Data.swift */; };
+		7F1255641FC7596B0014EBFF /* PlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1255631FC7596B0014EBFF /* PlayingViewController.swift */; };
 		7F18A5881F967E6D000328FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18A5871F967E6D000328FD /* AppDelegate.swift */; };
 		7F18A58A1F967E6D000328FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18A5891F967E6D000328FD /* ViewController.swift */; };
 		7F18A58D1F967E6D000328FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F18A58B1F967E6D000328FD /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F12555F1FC751D00014EBFF /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		7F1255611FC754740014EBFF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		7F1255631FC7596B0014EBFF /* PlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingViewController.swift; sourceTree = "<group>"; };
 		7F18A5841F967E6D000328FD /* ReproductorMusicaJulio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReproductorMusicaJulio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F18A5871F967E6D000328FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F18A5891F967E6D000328FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 				7F18A58E1F967E6D000328FD /* Assets.xcassets */,
 				7F18A5901F967E6D000328FD /* LaunchScreen.storyboard */,
 				7F18A5931F967E6E000328FD /* Info.plist */,
+				7F12555F1FC751D00014EBFF /* Song.swift */,
+				7F1255611FC754740014EBFF /* Data.swift */,
+				7F1255631FC7596B0014EBFF /* PlayingViewController.swift */,
 			);
 			path = ReproductorMusicaJulio;
 			sourceTree = "<group>";
@@ -136,8 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F1255601FC751D00014EBFF /* Song.swift in Sources */,
 				7F18A58A1F967E6D000328FD /* ViewController.swift in Sources */,
 				7F18A5881F967E6D000328FD /* AppDelegate.swift in Sources */,
+				7F1255641FC7596B0014EBFF /* PlayingViewController.swift in Sources */,
+				7F1255621FC754740014EBFF /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +311,7 @@
 				7F18A5981F967E6E000328FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
