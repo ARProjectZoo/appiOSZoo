@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F1255601FC751D00014EBFF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12555F1FC751D00014EBFF /* Song.swift */; };
-		7F1255621FC754740014EBFF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1255611FC754740014EBFF /* Data.swift */; };
-		7F1255641FC7596B0014EBFF /* PlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1255631FC7596B0014EBFF /* PlayingViewController.swift */; };
+		25E2D739571678B630E83658 /* Pods_ReproductorMusicaJulio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A4C797EF1BB1BC63F52ED5 /* Pods_ReproductorMusicaJulio.framework */; };
+		6F0853DA2010E04900AB5CC2 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0853D92010E04900AB5CC2 /* Users.swift */; };
+		6F97C79A2010C65D00FD179F /* CustomSwiftToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F97C7992010C65D00FD179F /* CustomSwiftToast.swift */; };
+		7F13AD582016511A0069C86F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13AD572016511A0069C86F /* InfoViewController.swift */; };
+		7F13AD5A2016512E0069C86F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13AD592016512E0069C86F /* ProfileViewController.swift */; };
 		7F18A5881F967E6D000328FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18A5871F967E6D000328FD /* AppDelegate.swift */; };
 		7F18A58A1F967E6D000328FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18A5891F967E6D000328FD /* ViewController.swift */; };
 		7F18A58D1F967E6D000328FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F18A58B1F967E6D000328FD /* Main.storyboard */; };
 		7F18A58F1F967E6D000328FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F18A58E1F967E6D000328FD /* Assets.xcassets */; };
 		7F18A5921F967E6D000328FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F18A5901F967E6D000328FD /* LaunchScreen.storyboard */; };
+		7F5F9E4B1FCC662A00B63B03 /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F9E4A1FCC662A00B63B03 /* ErrorMessages.swift */; };
+		7FA89290201A54DA005DAA8D /* EditStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8928F201A54DA005DAA8D /* EditStoryViewController.swift */; };
+		7FB924662017871B00A3D23A /* ForgotPass1PagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB924652017871B00A3D23A /* ForgotPass1PagViewController.swift */; };
+		7FB924682017BEF700A3D23A /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB924672017BEF700A3D23A /* ImageCollectionViewController.swift */; };
+		7FBE6937200FAC6F00511047 /* appTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE6936200FAC6F00511047 /* appTools.swift */; };
+		7FBE6939200FCD7C00511047 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE6938200FCD7C00511047 /* ForgotPassViewController.swift */; };
+		7FD3D469200E4E37007A7B2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD3D468200E4E37007A7B2D /* LoginViewController.swift */; };
+		7FD3D46B200E4E47007A7B2D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD3D46A200E4E47007A7B2D /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F12555F1FC751D00014EBFF /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		7F1255611FC754740014EBFF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		7F1255631FC7596B0014EBFF /* PlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingViewController.swift; sourceTree = "<group>"; };
+		2F1ABE11A70C296319A4512D /* Pods-ReproductorMusicaJulio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReproductorMusicaJulio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReproductorMusicaJulio/Pods-ReproductorMusicaJulio.debug.xcconfig"; sourceTree = "<group>"; };
+		6F0853D92010E04900AB5CC2 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		6F97C7992010C65D00FD179F /* CustomSwiftToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwiftToast.swift; sourceTree = "<group>"; };
+		7F13AD572016511A0069C86F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		7F13AD592016512E0069C86F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7F18A5841F967E6D000328FD /* ReproductorMusicaJulio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReproductorMusicaJulio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F18A5871F967E6D000328FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F18A5891F967E6D000328FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +40,16 @@
 		7F18A58E1F967E6D000328FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F18A5911F967E6D000328FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F18A5931F967E6E000328FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F5F9E4A1FCC662A00B63B03 /* ErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
+		7FA8928F201A54DA005DAA8D /* EditStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStoryViewController.swift; sourceTree = "<group>"; };
+		7FB924652017871B00A3D23A /* ForgotPass1PagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPass1PagViewController.swift; sourceTree = "<group>"; };
+		7FB924672017BEF700A3D23A /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		7FBE6936200FAC6F00511047 /* appTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appTools.swift; sourceTree = "<group>"; };
+		7FBE6938200FCD7C00511047 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
+		7FD3D468200E4E37007A7B2D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7FD3D46A200E4E47007A7B2D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C8A4C797EF1BB1BC63F52ED5 /* Pods_ReproductorMusicaJulio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReproductorMusicaJulio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E13E6C213D45C63F7D545F30 /* Pods-ReproductorMusicaJulio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReproductorMusicaJulio.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReproductorMusicaJulio/Pods-ReproductorMusicaJulio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +57,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E2D739571678B630E83658 /* Pods_ReproductorMusicaJulio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27E052531524F48A2D7C4098 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8A4C797EF1BB1BC63F52ED5 /* Pods_ReproductorMusicaJulio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F18A57B1F967E6D000328FD = {
 			isa = PBXGroup;
 			children = (
 				7F18A5861F967E6D000328FD /* ReproductorMusicaJulio */,
 				7F18A5851F967E6D000328FD /* Products */,
+				AC3DE88428563864A1D16E97 /* Pods */,
+				27E052531524F48A2D7C4098 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,15 +95,33 @@
 			children = (
 				7F18A5871F967E6D000328FD /* AppDelegate.swift */,
 				7F18A5891F967E6D000328FD /* ViewController.swift */,
+				7FBE6936200FAC6F00511047 /* appTools.swift */,
 				7F18A58B1F967E6D000328FD /* Main.storyboard */,
 				7F18A58E1F967E6D000328FD /* Assets.xcassets */,
 				7F18A5901F967E6D000328FD /* LaunchScreen.storyboard */,
 				7F18A5931F967E6E000328FD /* Info.plist */,
-				7F12555F1FC751D00014EBFF /* Song.swift */,
-				7F1255611FC754740014EBFF /* Data.swift */,
-				7F1255631FC7596B0014EBFF /* PlayingViewController.swift */,
+				7F5F9E4A1FCC662A00B63B03 /* ErrorMessages.swift */,
+				7FD3D468200E4E37007A7B2D /* LoginViewController.swift */,
+				7FD3D46A200E4E47007A7B2D /* RegisterViewController.swift */,
+				7FBE6938200FCD7C00511047 /* ForgotPassViewController.swift */,
+				6F97C7992010C65D00FD179F /* CustomSwiftToast.swift */,
+				6F0853D92010E04900AB5CC2 /* Users.swift */,
+				7F13AD572016511A0069C86F /* InfoViewController.swift */,
+				7F13AD592016512E0069C86F /* ProfileViewController.swift */,
+				7FB924652017871B00A3D23A /* ForgotPass1PagViewController.swift */,
+				7FB924672017BEF700A3D23A /* ImageCollectionViewController.swift */,
+				7FA8928F201A54DA005DAA8D /* EditStoryViewController.swift */,
 			);
 			path = ReproductorMusicaJulio;
+			sourceTree = "<group>";
+		};
+		AC3DE88428563864A1D16E97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F1ABE11A70C296319A4512D /* Pods-ReproductorMusicaJulio.debug.xcconfig */,
+				E13E6C213D45C63F7D545F30 /* Pods-ReproductorMusicaJulio.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F18A5961F967E6E000328FD /* Build configuration list for PBXNativeTarget "ReproductorMusicaJulio" */;
 			buildPhases = (
+				FB6167CD7B834809374FFCB1 /* [CP] Check Pods Manifest.lock */,
 				7F18A5801F967E6D000328FD /* Sources */,
 				7F18A5811F967E6D000328FD /* Frameworks */,
 				7F18A5821F967E6D000328FD /* Resources */,
+				6EF09CA242E1B861BEE3C9BE /* [CP] Embed Pods Frameworks */,
+				4340BD67851BEF4DD90B5DF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,16 +194,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4340BD67851BEF4DD90B5DF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReproductorMusicaJulio/Pods-ReproductorMusicaJulio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EF09CA242E1B861BEE3C9BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ReproductorMusicaJulio/Pods-ReproductorMusicaJulio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
+				"${BUILT_PRODUCTS_DIR}/ZAlertView/ZAlertView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZAlertView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReproductorMusicaJulio/Pods-ReproductorMusicaJulio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB6167CD7B834809374FFCB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReproductorMusicaJulio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F18A5801F967E6D000328FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F1255601FC751D00014EBFF /* Song.swift in Sources */,
+				7FB924682017BEF700A3D23A /* ImageCollectionViewController.swift in Sources */,
+				7FD3D469200E4E37007A7B2D /* LoginViewController.swift in Sources */,
+				6F0853DA2010E04900AB5CC2 /* Users.swift in Sources */,
+				7FD3D46B200E4E47007A7B2D /* RegisterViewController.swift in Sources */,
+				7FB924662017871B00A3D23A /* ForgotPass1PagViewController.swift in Sources */,
+				7FBE6939200FCD7C00511047 /* ForgotPassViewController.swift in Sources */,
+				7FA89290201A54DA005DAA8D /* EditStoryViewController.swift in Sources */,
+				7F13AD582016511A0069C86F /* InfoViewController.swift in Sources */,
 				7F18A58A1F967E6D000328FD /* ViewController.swift in Sources */,
+				7F13AD5A2016512E0069C86F /* ProfileViewController.swift in Sources */,
+				6F97C79A2010C65D00FD179F /* CustomSwiftToast.swift in Sources */,
+				7FBE6937200FAC6F00511047 /* appTools.swift in Sources */,
+				7F5F9E4B1FCC662A00B63B03 /* ErrorMessages.swift in Sources */,
 				7F18A5881F967E6D000328FD /* AppDelegate.swift in Sources */,
-				7F1255641FC7596B0014EBFF /* PlayingViewController.swift in Sources */,
-				7F1255621FC754740014EBFF /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +389,7 @@
 		};
 		7F18A5971F967E6E000328FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F1ABE11A70C296319A4512D /* Pods-ReproductorMusicaJulio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReproductorMusicaJulio/Info.plist;
@@ -282,6 +402,7 @@
 		};
 		7F18A5981F967E6E000328FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E13E6C213D45C63F7D545F30 /* Pods-ReproductorMusicaJulio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReproductorMusicaJulio/Info.plist;
