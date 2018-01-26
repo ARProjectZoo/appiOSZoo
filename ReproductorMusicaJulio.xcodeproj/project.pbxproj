@@ -21,6 +21,7 @@
 		7FA89290201A54DA005DAA8D /* EditStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8928F201A54DA005DAA8D /* EditStoryViewController.swift */; };
 		7FB924662017871B00A3D23A /* ForgotPass1PagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB924652017871B00A3D23A /* ForgotPass1PagViewController.swift */; };
 		7FB924682017BEF700A3D23A /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB924672017BEF700A3D23A /* ImageCollectionViewController.swift */; };
+		7FB9611E201B840B008CCC3C /* ViewStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB9611D201B840B008CCC3C /* ViewStoryViewController.swift */; };
 		7FBE6937200FAC6F00511047 /* appTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE6936200FAC6F00511047 /* appTools.swift */; };
 		7FBE6939200FCD7C00511047 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE6938200FCD7C00511047 /* ForgotPassViewController.swift */; };
 		7FD3D469200E4E37007A7B2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD3D468200E4E37007A7B2D /* LoginViewController.swift */; };
@@ -44,6 +45,7 @@
 		7FA8928F201A54DA005DAA8D /* EditStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStoryViewController.swift; sourceTree = "<group>"; };
 		7FB924652017871B00A3D23A /* ForgotPass1PagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPass1PagViewController.swift; sourceTree = "<group>"; };
 		7FB924672017BEF700A3D23A /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		7FB9611D201B840B008CCC3C /* ViewStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStoryViewController.swift; sourceTree = "<group>"; };
 		7FBE6936200FAC6F00511047 /* appTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appTools.swift; sourceTree = "<group>"; };
 		7FBE6938200FCD7C00511047 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		7FD3D468200E4E37007A7B2D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				7FB924652017871B00A3D23A /* ForgotPass1PagViewController.swift */,
 				7FB924672017BEF700A3D23A /* ImageCollectionViewController.swift */,
 				7FA8928F201A54DA005DAA8D /* EditStoryViewController.swift */,
+				7FB9611D201B840B008CCC3C /* ViewStoryViewController.swift */,
 			);
 			path = ReproductorMusicaJulio;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				7FBE6937200FAC6F00511047 /* appTools.swift in Sources */,
 				7F5F9E4B1FCC662A00B63B03 /* ErrorMessages.swift in Sources */,
 				7F18A5881F967E6D000328FD /* AppDelegate.swift in Sources */,
+				7FB9611E201B840B008CCC3C /* ViewStoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
