@@ -49,12 +49,11 @@ class ViewStoryViewController: UIViewController {
     
     //tamaños pantalla
     func screen4Inch () {
-        distanceTopLabel.constant = 40
-        distanceLabelPhoto.constant = 40
-        distancePhotoTF.constant = 40
-        distanceTFButton.constant = 40
-        distanceButtonBottom.constant = 40
-        
+        distanceTopLabel.constant = 20
+        distanceLabelPhoto.constant = 20
+        distancePhotoTF.constant = 20
+        distanceTFButton.constant = 20
+        distanceButtonBottom.constant = 20
     }
     func screen4_7Inch () {
         distanceTopLabel.constant = 40
@@ -80,8 +79,6 @@ class ViewStoryViewController: UIViewController {
         distanceButtonBottom.constant = 100
         
     }
-    
-    
     
 
    
