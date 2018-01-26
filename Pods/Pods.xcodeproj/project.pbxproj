@@ -1,0 +1,747 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09801315C64F2071E7A6A17D85BD43FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		0C1B751BD6FBAA41BBBF997D7B5A4F6C /* Pods-ReproductorMusicaJulio-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCB2078DEB145D162AD9A9B6C0D91ED9 /* Pods-ReproductorMusicaJulio-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E8D9924D83C92918338A4D6DB4855B2 /* Pods-ReproductorMusicaJulio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 880031E4BBF863EF08AE763D9850BD42 /* Pods-ReproductorMusicaJulio-dummy.m */; };
+		689B08A00BC01C9FB72A82E80D0F6C58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6E8FA2D5F7707285718A471BA8E3F869 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		8907F698C02A1E3DD5CA2DD4B7387AFB /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD12068F7E9C8B927BB0246492E5BC /* Version.swift */; };
+		8CF381CFE809227EEDE92995264EE90D /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D26E5D097DFC2DD4A12A72CC41854A /* Size.swift */; };
+		95D1804FEDC921E2224BC58D9425255A /* Device-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F9BED327D694D43C6D5173C6D93C3C /* Device-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96C9EC67684C394A2222067091E32366 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDCF0F8FE2C932A15E9A95AF1E5A15C /* Device.swift */; };
+		9D2AD6D4D078A3BB5DC89721D6A5BDCA /* ZAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F9EF014DA4F52E6C320C86FD4E8A56 /* ZAlertView-dummy.m */; };
+		B27B163CFCBEEC45948AEC1EDA74B5C4 /* Device-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE4157661C826B660AB5CF7A1DB2DF5 /* Device-dummy.m */; };
+		B42FF9ACD48502DED2E586B7038B047A /* ZAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD7DDEC72A19CC06FC9A3EB6DBDB361 /* ZAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6D36BCE48DE6A0FC7FC2367F153AC50 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE60203EAD6D7D88B55B8AA8900C30 /* UIColor.swift */; };
+		DD14B8ECC2DFA91E25604F654803A64B /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3574D01C58E5503FAE5FE5159825B7AE /* Type.swift */; };
+		E66F3F41F6642EF186A39F2127B65CA0 /* ZAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328D3455024C0BCDD3727134526F3782 /* ZAlertView.swift */; };
+		E758904CFDD9A5610476B3B6DDB5257F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD915EA87C5D562E053F5DF1792CDB /* UIImage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09EA0ED132219F6C0501B5E1F22E23FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E90024CA4621EC0A8B8C777C958214A;
+			remoteInfo = Device;
+		};
+		B05847E3E785A940CB82C11AC5E8CFB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B060C5628595E11B0FEF5BA8E011292C;
+			remoteInfo = ZAlertView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09AD12068F7E9C8B927BB0246492E5BC /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Source/Version.swift; sourceTree = "<group>"; };
+		0FC14D7E962904650D62BFA498DEC762 /* Pods-ReproductorMusicaJulio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReproductorMusicaJulio.release.xcconfig"; sourceTree = "<group>"; };
+		0FE4157661C826B660AB5CF7A1DB2DF5 /* Device-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Device-dummy.m"; sourceTree = "<group>"; };
+		212DC894F3615F4A43BE30A06D9B4D2F /* Pods-ReproductorMusicaJulio-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReproductorMusicaJulio-acknowledgements.plist"; sourceTree = "<group>"; };
+		21CFD3ED5057022CA6D7EB48583AA209 /* Device.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Device.framework; path = Device.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C33C104E343FC02755D229799A07013 /* Pods_ReproductorMusicaJulio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ReproductorMusicaJulio.framework; path = "Pods-ReproductorMusicaJulio.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD7DDEC72A19CC06FC9A3EB6DBDB361 /* ZAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZAlertView-umbrella.h"; sourceTree = "<group>"; };
+		318BA4DE859A4525DF01A68D59CA22DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31D26E5D097DFC2DD4A12A72CC41854A /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Source/Size.swift; sourceTree = "<group>"; };
+		328D3455024C0BCDD3727134526F3782 /* ZAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZAlertView.swift; path = Pod/Classes/ZAlertView.swift; sourceTree = "<group>"; };
+		343D4ABEB509C0DC2022D9B66E8CF5D0 /* ZAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZAlertView-prefix.pch"; sourceTree = "<group>"; };
+		3574D01C58E5503FAE5FE5159825B7AE /* Type.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Type.swift; path = Source/Type.swift; sourceTree = "<group>"; };
+		37FE60203EAD6D7D88B55B8AA8900C30 /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Pod/Classes/UIColor.swift; sourceTree = "<group>"; };
+		41241810EDFAE99BE1FBC485A8CECADB /* Pods-ReproductorMusicaJulio.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ReproductorMusicaJulio.modulemap"; sourceTree = "<group>"; };
+		6231E849EBE1816E108501D411827E4F /* Device.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Device.modulemap; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		710CC966815B671DF7A994A949B0F625 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F86F95A4536FC88AE7C7F62939B304 /* Pods-ReproductorMusicaJulio-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReproductorMusicaJulio-frameworks.sh"; sourceTree = "<group>"; };
+		76F629E9DE1EF2E83A6D70088C50F217 /* Device.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Device.xcconfig; sourceTree = "<group>"; };
+		880031E4BBF863EF08AE763D9850BD42 /* Pods-ReproductorMusicaJulio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReproductorMusicaJulio-dummy.m"; sourceTree = "<group>"; };
+		89F9BED327D694D43C6D5173C6D93C3C /* Device-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Device-umbrella.h"; sourceTree = "<group>"; };
+		8AA1CDA37F98553120D352875509F720 /* ZAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZAlertView.framework; path = ZAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B5A9B24D6245337372AA1238BD671A3 /* Pods-ReproductorMusicaJulio-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReproductorMusicaJulio-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EAD915EA87C5D562E053F5DF1792CDB /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Pod/Classes/UIImage.swift; sourceTree = "<group>"; };
+		9EC4F9C0EE922EC35A1C1AD4C51E0A1E /* ZAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZAlertView.xcconfig; sourceTree = "<group>"; };
+		A7F9EF014DA4F52E6C320C86FD4E8A56 /* ZAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZAlertView-dummy.m"; sourceTree = "<group>"; };
+		BC4C578C1EE1CD02BA014B32A01AB5FA /* Pods-ReproductorMusicaJulio-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReproductorMusicaJulio-resources.sh"; sourceTree = "<group>"; };
+		BF81AA49E9E0CFBD7F3C2993DFAF56E3 /* Pods-ReproductorMusicaJulio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReproductorMusicaJulio.debug.xcconfig"; sourceTree = "<group>"; };
+		BFD6BEF32481C19F1086DB7480BC1457 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D34C732ADE202CCE757F984829C6E5B4 /* Device-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Device-prefix.pch"; sourceTree = "<group>"; };
+		EB94D86DCC77C53FB623CCFF963A44DA /* ZAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ZAlertView.modulemap; sourceTree = "<group>"; };
+		FCB2078DEB145D162AD9A9B6C0D91ED9 /* Pods-ReproductorMusicaJulio-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ReproductorMusicaJulio-umbrella.h"; sourceTree = "<group>"; };
+		FFDCF0F8FE2C932A15E9A95AF1E5A15C /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Source/iOS/Device.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B420B4D103C13324FCF18F2933D655F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689B08A00BC01C9FB72A82E80D0F6C58 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D0DE6B8EAE9153A64C9A680780877C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09801315C64F2071E7A6A17D85BD43FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69431423F129CF52261D78E204CDF539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E8FA2D5F7707285718A471BA8E3F869 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E6041E939DEBD671A4CC36BBE244522 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B9AFA50D6228173C53B7F2B22E50AA2 /* Pods-ReproductorMusicaJulio */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3BAAB6F2C5350567C8B9C5A914933FB1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6231E849EBE1816E108501D411827E4F /* Device.modulemap */,
+				76F629E9DE1EF2E83A6D70088C50F217 /* Device.xcconfig */,
+				0FE4157661C826B660AB5CF7A1DB2DF5 /* Device-dummy.m */,
+				D34C732ADE202CCE757F984829C6E5B4 /* Device-prefix.pch */,
+				89F9BED327D694D43C6D5173C6D93C3C /* Device-umbrella.h */,
+				318BA4DE859A4525DF01A68D59CA22DA /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Device";
+			sourceTree = "<group>";
+		};
+		3F1BE0C885CE7535D8D7C7EFF96C80D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21CFD3ED5057022CA6D7EB48583AA209 /* Device.framework */,
+				2C33C104E343FC02755D229799A07013 /* Pods_ReproductorMusicaJulio.framework */,
+				8AA1CDA37F98553120D352875509F720 /* ZAlertView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55CC16EF505489083101EC797FC9135C /* ZAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				37FE60203EAD6D7D88B55B8AA8900C30 /* UIColor.swift */,
+				9EAD915EA87C5D562E053F5DF1792CDB /* UIImage.swift */,
+				328D3455024C0BCDD3727134526F3782 /* ZAlertView.swift */,
+				8902063EB1A6AAA76A110F8034B3ADA0 /* Support Files */,
+			);
+			name = ZAlertView;
+			path = ZAlertView;
+			sourceTree = "<group>";
+		};
+		6B9AFA50D6228173C53B7F2B22E50AA2 /* Pods-ReproductorMusicaJulio */ = {
+			isa = PBXGroup;
+			children = (
+				710CC966815B671DF7A994A949B0F625 /* Info.plist */,
+				41241810EDFAE99BE1FBC485A8CECADB /* Pods-ReproductorMusicaJulio.modulemap */,
+				8B5A9B24D6245337372AA1238BD671A3 /* Pods-ReproductorMusicaJulio-acknowledgements.markdown */,
+				212DC894F3615F4A43BE30A06D9B4D2F /* Pods-ReproductorMusicaJulio-acknowledgements.plist */,
+				880031E4BBF863EF08AE763D9850BD42 /* Pods-ReproductorMusicaJulio-dummy.m */,
+				75F86F95A4536FC88AE7C7F62939B304 /* Pods-ReproductorMusicaJulio-frameworks.sh */,
+				BC4C578C1EE1CD02BA014B32A01AB5FA /* Pods-ReproductorMusicaJulio-resources.sh */,
+				FCB2078DEB145D162AD9A9B6C0D91ED9 /* Pods-ReproductorMusicaJulio-umbrella.h */,
+				BF81AA49E9E0CFBD7F3C2993DFAF56E3 /* Pods-ReproductorMusicaJulio.debug.xcconfig */,
+				0FC14D7E962904650D62BFA498DEC762 /* Pods-ReproductorMusicaJulio.release.xcconfig */,
+			);
+			name = "Pods-ReproductorMusicaJulio";
+			path = "Target Support Files/Pods-ReproductorMusicaJulio";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CAC09BE684872CFA7EC09F564D4FF1E6 /* Pods */,
+				3F1BE0C885CE7535D8D7C7EFF96C80D3 /* Products */,
+				1E6041E939DEBD671A4CC36BBE244522 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8902063EB1A6AAA76A110F8034B3ADA0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFD6BEF32481C19F1086DB7480BC1457 /* Info.plist */,
+				EB94D86DCC77C53FB623CCFF963A44DA /* ZAlertView.modulemap */,
+				9EC4F9C0EE922EC35A1C1AD4C51E0A1E /* ZAlertView.xcconfig */,
+				A7F9EF014DA4F52E6C320C86FD4E8A56 /* ZAlertView-dummy.m */,
+				343D4ABEB509C0DC2022D9B66E8CF5D0 /* ZAlertView-prefix.pch */,
+				2DD7DDEC72A19CC06FC9A3EB6DBDB361 /* ZAlertView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZAlertView";
+			sourceTree = "<group>";
+		};
+		92ED3195978E2A10E67CA15BA7BD0F22 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				FFDCF0F8FE2C932A15E9A95AF1E5A15C /* Device.swift */,
+				31D26E5D097DFC2DD4A12A72CC41854A /* Size.swift */,
+				3574D01C58E5503FAE5FE5159825B7AE /* Type.swift */,
+				09AD12068F7E9C8B927BB0246492E5BC /* Version.swift */,
+				3BAAB6F2C5350567C8B9C5A914933FB1 /* Support Files */,
+			);
+			name = Device;
+			path = Device;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAC09BE684872CFA7EC09F564D4FF1E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92ED3195978E2A10E67CA15BA7BD0F22 /* Device */,
+				55CC16EF505489083101EC797FC9135C /* ZAlertView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0FA9889BF6C0D38E6E622780486934A9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D1804FEDC921E2224BC58D9425255A /* Device-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2040117E28035FB739DD3EB9BAB2E7C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42FF9ACD48502DED2E586B7038B047A /* ZAlertView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59082B1B8A71A72E33096DF80A54FEEF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1B751BD6FBAA41BBBF997D7B5A4F6C /* Pods-ReproductorMusicaJulio-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5E90024CA4621EC0A8B8C777C958214A /* Device */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2E7FAADB4B505BC390985BE8CF336FE /* Build configuration list for PBXNativeTarget "Device" */;
+			buildPhases = (
+				CD4864F12B23EA1B7163899E8447FB8F /* Sources */,
+				69431423F129CF52261D78E204CDF539 /* Frameworks */,
+				0FA9889BF6C0D38E6E622780486934A9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Device;
+			productName = Device;
+			productReference = 21CFD3ED5057022CA6D7EB48583AA209 /* Device.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		73320D32EC00400D034FEADD324006F6 /* Pods-ReproductorMusicaJulio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E34000CF7827969C35055108A5C692A /* Build configuration list for PBXNativeTarget "Pods-ReproductorMusicaJulio" */;
+			buildPhases = (
+				E458BA525EF52BA9BB116DFE6066E8B0 /* Sources */,
+				3D0DE6B8EAE9153A64C9A680780877C5 /* Frameworks */,
+				59082B1B8A71A72E33096DF80A54FEEF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				648FA02DD8312D3814710E8E09DBA284 /* PBXTargetDependency */,
+				0738D4369CBC9D12FBA307F55E8AEE71 /* PBXTargetDependency */,
+			);
+			name = "Pods-ReproductorMusicaJulio";
+			productName = "Pods-ReproductorMusicaJulio";
+			productReference = 2C33C104E343FC02755D229799A07013 /* Pods_ReproductorMusicaJulio.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B060C5628595E11B0FEF5BA8E011292C /* ZAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ABF4BABE84B7632B255F68E80DFDF0A /* Build configuration list for PBXNativeTarget "ZAlertView" */;
+			buildPhases = (
+				6AC1149BC09AB6ABCB7E334090A3FF22 /* Sources */,
+				0B420B4D103C13324FCF18F2933D655F /* Frameworks */,
+				2040117E28035FB739DD3EB9BAB2E7C4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZAlertView;
+			productName = ZAlertView;
+			productReference = 8AA1CDA37F98553120D352875509F720 /* ZAlertView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 3F1BE0C885CE7535D8D7C7EFF96C80D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E90024CA4621EC0A8B8C777C958214A /* Device */,
+				73320D32EC00400D034FEADD324006F6 /* Pods-ReproductorMusicaJulio */,
+				B060C5628595E11B0FEF5BA8E011292C /* ZAlertView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AC1149BC09AB6ABCB7E334090A3FF22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D36BCE48DE6A0FC7FC2367F153AC50 /* UIColor.swift in Sources */,
+				E758904CFDD9A5610476B3B6DDB5257F /* UIImage.swift in Sources */,
+				9D2AD6D4D078A3BB5DC89721D6A5BDCA /* ZAlertView-dummy.m in Sources */,
+				E66F3F41F6642EF186A39F2127B65CA0 /* ZAlertView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4864F12B23EA1B7163899E8447FB8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27B163CFCBEEC45948AEC1EDA74B5C4 /* Device-dummy.m in Sources */,
+				96C9EC67684C394A2222067091E32366 /* Device.swift in Sources */,
+				8CF381CFE809227EEDE92995264EE90D /* Size.swift in Sources */,
+				DD14B8ECC2DFA91E25604F654803A64B /* Type.swift in Sources */,
+				8907F698C02A1E3DD5CA2DD4B7387AFB /* Version.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E458BA525EF52BA9BB116DFE6066E8B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8D9924D83C92918338A4D6DB4855B2 /* Pods-ReproductorMusicaJulio-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0738D4369CBC9D12FBA307F55E8AEE71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZAlertView;
+			target = B060C5628595E11B0FEF5BA8E011292C /* ZAlertView */;
+			targetProxy = B05847E3E785A940CB82C11AC5E8CFB7 /* PBXContainerItemProxy */;
+		};
+		648FA02DD8312D3814710E8E09DBA284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Device;
+			target = 5E90024CA4621EC0A8B8C777C958214A /* Device */;
+			targetProxy = 09EA0ED132219F6C0501B5E1F22E23FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01AA9679D68859B29B5EDC752EA7DE52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF81AA49E9E0CFBD7F3C2993DFAF56E3 /* Pods-ReproductorMusicaJulio.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ReproductorMusicaJulio/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ReproductorMusicaJulio/Pods-ReproductorMusicaJulio.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ReproductorMusicaJulio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10B4CAAF3DCF8E4AC1E1B222C7D61C64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EC4F9C0EE922EC35A1C1AD4C51E0A1E /* ZAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZAlertView/ZAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZAlertView/ZAlertView.modulemap";
+				PRODUCT_NAME = ZAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		29890F220C67D029CE7596DB3AC21BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FC14D7E962904650D62BFA498DEC762 /* Pods-ReproductorMusicaJulio.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ReproductorMusicaJulio/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ReproductorMusicaJulio/Pods-ReproductorMusicaJulio.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ReproductorMusicaJulio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		389D44A67B490777E386B625658D842A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F629E9DE1EF2E83A6D70088C50F217 /* Device.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Device/Device-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Device/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Device/Device.modulemap";
+				PRODUCT_NAME = Device;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		621AB785940626574F07364CB14760E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9D266BBF6D5B4D78B5E141983D01CD5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F629E9DE1EF2E83A6D70088C50F217 /* Device.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Device/Device-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Device/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Device/Device.modulemap";
+				PRODUCT_NAME = Device;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B57C09D404C607DDE283C5C44183B2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FCE58C6A503C338CCA049A65578C5844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EC4F9C0EE922EC35A1C1AD4C51E0A1E /* ZAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZAlertView/ZAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZAlertView/ZAlertView.modulemap";
+				PRODUCT_NAME = ZAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ABF4BABE84B7632B255F68E80DFDF0A /* Build configuration list for PBXNativeTarget "ZAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE58C6A503C338CCA049A65578C5844 /* Debug */,
+				10B4CAAF3DCF8E4AC1E1B222C7D61C64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57C09D404C607DDE283C5C44183B2A1 /* Debug */,
+				621AB785940626574F07364CB14760E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E34000CF7827969C35055108A5C692A /* Build configuration list for PBXNativeTarget "Pods-ReproductorMusicaJulio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01AA9679D68859B29B5EDC752EA7DE52 /* Debug */,
+				29890F220C67D029CE7596DB3AC21BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2E7FAADB4B505BC390985BE8CF336FE /* Build configuration list for PBXNativeTarget "Device" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D266BBF6D5B4D78B5E141983D01CD5D /* Debug */,
+				389D44A67B490777E386B625658D842A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
