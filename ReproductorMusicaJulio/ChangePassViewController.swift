@@ -6,7 +6,7 @@ class ChangePassViewController: UIViewController {
 
     @IBOutlet weak var newPasswordTF: UITextField!
     @IBOutlet weak var repeatNewPasswordTF: UITextField!
-    var URLprincipal = "http://localhost:8888/APIZOOAR/API%20/fuelphp/public/"
+    var URLprincipal = "http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/"
     
     /*@IBAction func sendToNewPass(_ sender: UIButton)
     {

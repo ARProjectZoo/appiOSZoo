@@ -60,7 +60,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         view.addSubview(myActivityIndicator)
         
         //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIZOOAR/API%20/fuelphp/public/Users/show.json")
+        let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Users/show.json")
         var request = URLRequest(url:myUrl!)
         request.httpMethod = "GET"//compose a query string
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
@@ -298,6 +298,11 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         task.resume()
     }*/
+    
+    
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
 }
