@@ -17,5 +17,5 @@ extension UITextField {
 
     }
 }
-var myArrayProfile: [UIImage] = [#imageLiteral(resourceName: "fotousuario")]
+
 
