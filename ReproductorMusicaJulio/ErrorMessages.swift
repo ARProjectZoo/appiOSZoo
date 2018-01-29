@@ -19,6 +19,8 @@ func showAlert(message : String, view : UIViewController){
     view.present(alert, animated: true, completion: nil)
 }
 
+
+
 func userRegisterAlert(message : String) -> UIAlertController{
     let alert = UIAlertController(title: "Thank you!", message:
         message, preferredStyle: .alert)

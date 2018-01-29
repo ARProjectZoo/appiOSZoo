@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1c0-9S-chx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ubg-N6-z9u">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -186,7 +186,7 @@
         <!--Login-->
         <scene sceneID="dZE-bO-hXd">
             <objects>
-                <viewController id="8NN-sX-7Di" customClass="LoginViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainLogIn" id="8NN-sX-7Di" customClass="LoginViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vz9-SJ-P3b"/>
                         <viewControllerLayoutGuide type="bottom" id="eyW-OD-aYB"/>
@@ -716,7 +716,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="mnV-c0-fqH">
             <objects>
-                <tabBarController id="vRQ-CD-NdE" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainAPP" id="vRQ-CD-NdE" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QV3-kF-O58">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

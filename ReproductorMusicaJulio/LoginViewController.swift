@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
         view.addSubview(myActivityIndicator)
         
         //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIZOOAR/API%20/fuelphp/public/Users/login.json")
+        let myUrl = URL(string:"http://localhost:8888/APIBUENA/API3/public/Users/login.json")
         var request = URLRequest(url:myUrl!)
         request.httpMethod = "POST"//compose a query string
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
@@ -99,6 +99,11 @@ class LoginViewController: UIViewController {
                         print("logIn Completo")
                         print(parseJSON["token"] as! String)
                         UserDefaults.standard.set(parseJSON["token"] as! String, forKey: "token")
+                        DispatchQueue.main.async {
+                            let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
+                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainAPP") as UIViewController
+                            self.present(vc ,animated: true, completion: nil )
+                        }
                         break
                     case let (code) where code == 400:
                         print("Please try again")
