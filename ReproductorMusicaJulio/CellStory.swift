@@ -1,8 +1,7 @@
 
 import UIKit
 
-class ImageCollectionViewController: UICollectionViewCell{
-
+class CellStory: UICollectionViewCell{
 
     @IBOutlet weak var imgImage: UIImageView!
     

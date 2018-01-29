@@ -55,6 +55,7 @@ class LoginViewController: UIViewController {
                 self.dismiss(animated: true, completion:nil);
             }
         }
+        
         //Create Activity Indicator
         let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         //Position Activity Indicator in the center of the main view

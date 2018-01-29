@@ -1,33 +1,34 @@
 
-
 import UIKit
 import Device
 
-class ViewStoryViewController: UIViewController {
+class CreateStoryViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-    //layout
+    //layaout
     @IBOutlet weak var distanceLabelPhoto: NSLayoutConstraint!
     @IBOutlet weak var distancePhotoTF: NSLayoutConstraint!
     @IBOutlet weak var distanceTopLabel: NSLayoutConstraint!
     @IBOutlet weak var distanceButtonBottom: NSLayoutConstraint!
     @IBOutlet weak var distanceTFButton: NSLayoutConstraint!
-    
-    //view
+    //botones
+    @IBOutlet weak var buttonSave: UIButton!
+    //peticiones
+    var URLprincipal = "http://localhost:8888/APIZOOAR/API%20/fuelphp/public/"
     @IBOutlet weak var imageStory: UIImageView!
-    @IBOutlet weak var labelStory: UITextView!
+    @IBOutlet weak var commentTF: UITextField!
     
     
-  
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        buttonSave.layer.cornerRadius = 10
+        
+    }
+
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     
     func myFunc() {
         
@@ -85,7 +86,13 @@ class ViewStoryViewController: UIViewController {
     }
     
     
-    @IBAction func viewStory(_ sender: UIButton) {
+    @IBAction func saveStory(_ sender: UIButton) {
+        
+        if(commentTF == nil)
+        {
+            showAlert(message: "Write description", view : self )
+            return
+        }
         
         //Create Activity Indicator
         let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
@@ -100,14 +107,14 @@ class ViewStoryViewController: UIViewController {
         view.addSubview(myActivityIndicator)
         
         //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIZOOAR/API%20/fuelphp/public/Stories/show.json")
+        let myUrl = URL(string:"http://localhost:8888/APIZOOAR/API%20/fuelphp/public/Stories/create.json")
         var request = URLRequest(url:myUrl!)
-        request.httpMethod = "GET"//compose a query string
+        request.httpMethod = "POST"//compose a query string
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
         
-        let getString = /*"photo="+imageStory.image!+*/"&comment="+labelStory.text!
-        request.httpBody = getString.data(using: .utf8)
+        let postString = /*"photo="+imageStory.image!+*/"&comment="+commentTF.text!
+        request.httpBody = postString.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request)
         {
@@ -162,6 +169,6 @@ class ViewStoryViewController: UIViewController {
         
 }
     
-   
-
+    
+    
 

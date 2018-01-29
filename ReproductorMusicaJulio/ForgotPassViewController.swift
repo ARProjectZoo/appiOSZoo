@@ -97,9 +97,4 @@ class ForgotPassViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
-    }
 }
