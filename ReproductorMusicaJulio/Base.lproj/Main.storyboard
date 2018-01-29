@@ -186,7 +186,7 @@
         <!--Login-->
         <scene sceneID="dZE-bO-hXd">
             <objects>
-                <viewController id="8NN-sX-7Di" customClass="LoginViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainLogIn" id="8NN-sX-7Di" customClass="LoginViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vz9-SJ-P3b"/>
                         <viewControllerLayoutGuide type="bottom" id="eyW-OD-aYB"/>
@@ -729,7 +729,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="mnV-c0-fqH">
             <objects>
-                <tabBarController id="vRQ-CD-NdE" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainAPP" id="vRQ-CD-NdE" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QV3-kF-O58">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
