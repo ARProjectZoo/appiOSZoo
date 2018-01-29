@@ -471,7 +471,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo2" translatesAutoresizingMaskIntoConstraints="NO" id="52f-tt-KLZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omL-zM-pTw">
                                 <rect key="frame" x="94.666666666666686" y="60" width="185" height="185"/>
@@ -686,7 +686,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVo-en-byF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4988" y="-250.49261083743843"/>
+            <point key="canvasLocation" x="4482" y="-116"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="K6a-lC-ekH">
@@ -917,7 +917,6 @@
                                 </state>
                                 <connections>
                                     <action selector="back:" destination="pP6-2C-IJf" eventType="touchUpInside" id="aHM-S4-MNh"/>
-                                    <segue destination="pin-dw-obf" kind="show" id="ArI-AM-OTd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -963,7 +962,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6D-vN-vae" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pP6-2C-IJf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4988" y="556"/>
+            <point key="canvasLocation" x="4482" y="584"/>
         </scene>
     </scenes>
     <resources>
@@ -977,7 +976,4 @@
         <image name="unnamedverdeclaro" width="210" height="210"/>
         <image name="zooLogo" width="425" height="425"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ArI-AM-OTd"/>
-    </inferredMetricsTieBreakers>
 </document>
