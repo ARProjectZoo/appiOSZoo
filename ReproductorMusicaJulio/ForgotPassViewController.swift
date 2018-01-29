@@ -4,31 +4,51 @@ import UIKit
 
 class ForgotPassViewController: UIViewController {
 
-    @IBOutlet weak var newPasswordTF: UITextField!
-    @IBOutlet weak var repeatNewPasswordTF: UITextField!
-    var URLprincipal = "http://localhost:8888/APIZOOAR/API%20/fuelphp/public/"
+    @IBOutlet weak var userNameTF: UITextField!
+    @IBOutlet weak var userEmailTF: UITextField!
     
-    /*@IBAction func sendToNewPass(_ sender: UIButton)
-    {
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    var URLprincipal = "http://localhost:8888/APIZOOAR/API%20/fuelphp/public/"
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTF.customAspect()
+        userEmailTF.customAspect()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        userNameTF.customAspect()
+    }
+    @IBAction func ocultarTeclado(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    
+    
+    @IBAction func check(_ sender: UIButton) {
         
-    }*/
-   
-    @IBAction func sendToForgot(_ sender: UIButton)
-    {
-        let newPassword = newPasswordTF.text
-        let repeatPassword = repeatNewPasswordTF.text
+        let userName = userNameTF.text;
+        let userEmail = userEmailTF.text;
+        let usedNameStored = UserDefaults.standard.string(forKey: "userName");
+        let userEmailStored = UserDefaults.standard.string(forKey: "userEmail");
         
-            
-        if( newPassword == "" || repeatPassword == ""){
-            //showAlert(message: "All fields have to be filled")
-            return
-        }
-        if(newPassword != repeatPassword)
+        
+        if((userName?.isEmpty)! || (userEmail?.isEmpty)!)
         {
-            //showAlert(message: "Password do not match")
-            return
+            showAlert(message: "All fields are required", view : self )
+            return;
         }
         
+        if(usedNameStored == userName){
+            if(userEmailStored == userEmail)
+            {
+                UserDefaults.standard.set(true, forKey:"isUserLoggedIn");
+                UserDefaults.standard.synchronize();
+                
+                self.dismiss(animated: true, completion:nil);
+            }
+        }
+        //Create Activity Indicator
         let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         //Position Activity Indicator in the center of the main view
         myActivityIndicator.center = view.center
@@ -41,25 +61,22 @@ class ForgotPassViewController: UIViewController {
         view.addSubview(myActivityIndicator)
         
         //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIZOOAR/API%20/fuelphp/public/Users/register.json")
+        let myUrl = URL(string:"http://localhost:8888/APIBUENA/API3/public/Users/forgotPassword.json")
         var request = URLRequest(url:myUrl!)
         request.httpMethod = "POST"//compose a query string
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
-        request.addValue("Authorization", forHTTPHeaderField: UserDefaults.standard.string(forKey: "token")!)
         
-        let postString = "password="+newPasswordTF.text!
-        
+        let postString = "userName="+userNameTF.text!+"&email="+userEmailTF.text!
         request.httpBody = postString.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
             
             removeActivityIndicator(activityIndicator: myActivityIndicator)
-        
+            
             if error != nil
             {
-               //showAlert(message: "Could not successfully perform this request. Please try again later")
-                
+                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
                 print("error=\(String(describing: error))")
             }
             
@@ -72,8 +89,13 @@ class ForgotPassViewController: UIViewController {
                     let code = parseJSON["code"] as! Int
                     switch code {
                     case let (code) where code == 200:
-                        print("contraseña cambiada")
-                        //showAlert(message: "Contraseña cambiada")
+                        print("Forget completo")
+                        print(parseJSON["token"] as! String)
+                        DispatchQueue.main.async {
+                            let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
+                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "changePassword") as UIViewController
+                            self.present(vc ,animated: true, completion: nil )
+                        }
                         break
                     case let (code) where code == 400:
                         print("Please try again")
@@ -82,19 +104,15 @@ class ForgotPassViewController: UIViewController {
                         print("Please try again")
                         break
                     }
-                    
                 }
             }catch{
                 removeActivityIndicator(activityIndicator: myActivityIndicator)
-                //showAlert(message: "Please try again")
+                
                 print(error)
             }
         }
         task.resume()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+   
 
-    }
 }
