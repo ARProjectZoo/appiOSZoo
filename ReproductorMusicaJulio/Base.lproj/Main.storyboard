@@ -360,9 +360,6 @@
                                 </state>
                                 <connections>
                                     <action selector="check:" destination="DN8-J5-6Sq" eventType="touchUpInside" id="vuW-cX-3kb"/>
-                                    <action selector="login:" destination="DN8-J5-6Sq" eventType="touchUpInside" id="CiE-xq-gsA"/>
-                                    <action selector="sendToNewPass:" destination="DN8-J5-6Sq" eventType="touchUpInside" id="ri2-tI-T1B"/>
-                                    <segue destination="6al-Qt-iU4" kind="show" id="osW-S2-b6U"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-gM-9gr">
@@ -775,9 +772,7 @@
                                     <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="login:" destination="6al-Qt-iU4" eventType="touchUpInside" id="ETn-I7-INr"/>
-                                    <action selector="sendToForgot:" destination="6al-Qt-iU4" eventType="touchUpInside" id="zgO-RC-pw3"/>
-                                    <action selector="sendToLogin:" destination="6al-Qt-iU4" eventType="touchUpInside" id="ioH-Vl-EJu"/>
+                                    <action selector="sendToForgot:" destination="6al-Qt-iU4" eventType="touchUpInside" id="ogU-g5-UKE"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bpw-Jz-xbO">
@@ -851,8 +846,6 @@
                     <connections>
                         <outlet property="newPasswordTF" destination="fNV-6N-TRU" id="pos-Gc-nk6"/>
                         <outlet property="repeatNewPasswordTF" destination="95h-Xa-taN" id="1Ji-Qd-wP9"/>
-                        <outlet property="userEmailTF" destination="fNV-6N-TRU" id="AuD-7G-RLZ"/>
-                        <outlet property="userPasswordTF" destination="95h-Xa-taN" id="ye3-Mb-caa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yuj-SJ-lHh" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -76,7 +76,7 @@ class ForgotPassViewController: UIViewController {
             
             if error != nil
             {
-                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
+//                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
                 print("error=\(String(describing: error))")
             }
             
@@ -87,6 +87,7 @@ class ForgotPassViewController: UIViewController {
                 if let parseJSON = json {
                     
                     let code = parseJSON["code"] as! Int
+                    print(parseJSON)
                     switch code {
                     case let (code) where code == 200:
                         print("Forget completo")
@@ -98,6 +99,9 @@ class ForgotPassViewController: UIViewController {
                         }
                         break
                     case let (code) where code == 400:
+                        print("Please try again")
+                        break
+                    case let (code) where code == 500:
                         print("Please try again")
                         break
                     default :

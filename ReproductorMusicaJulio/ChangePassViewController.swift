@@ -48,7 +48,7 @@ class ChangePassViewController: UIViewController {
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
         request.addValue("Authorization", forHTTPHeaderField: UserDefaults.standard.string(forKey: "token")!)
         
-        let postString = "password="+newPasswordTF.text!
+        let postString = "newPassword="+newPasswordTF.text!
         
         request.httpBody = postString.data(using: .utf8)
         
