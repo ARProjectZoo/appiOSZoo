@@ -113,7 +113,7 @@ class CreateStoryViewController: UIViewController {
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
         
-        let postString = /*"photo="+imageStory.image!+*/"&comment="+commentTF.text!
+        let postString = "photo="+commentTF.text!+"&comment="+commentTF.text!+"&date="+Date
         request.httpBody = postString.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request)
