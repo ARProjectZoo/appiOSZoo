@@ -7,6 +7,8 @@ target 'ReproductorMusicaJulio' do
 
   # Pods for ReproductorMusicaJulio
   
- pod 'ZAlertView'
-pod "Device", '~> 3.0.3'
+  pod 'ZAlertView'
+  pod "Device", '~> 3.0.3'
+  pod 'Alamofire', '~> 4.5'
+
 end
