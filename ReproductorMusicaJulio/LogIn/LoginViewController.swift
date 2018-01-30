@@ -69,69 +69,90 @@ class LoginViewController: UIViewController {
         view.addSubview(myActivityIndicator)
         
         //ALAMOFIRE REQUEST
-        
-        
-        //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Users/login.json")
-        var request = URLRequest(url:myUrl!)
-        request.httpMethod = "POST"//compose a query string
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
-        
-        let postString = "userName="+userNameTF.text!+"&password="+userPasswordTF.text!
-        request.httpBody = postString.data(using: .utf8)
-        
-        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
-            
-            removeActivityIndicator(activityIndicator: myActivityIndicator)
-            
-            if error != nil
-            {
-                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
-                print("error=\(String(describing: error))")
-            }
-            
-            // RESPONSE sent from a server side code to NSDictionary object:
-            do{
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-
-                if let parseJSON = json {
-                    
-                    let code = parseJSON["code"] as! Int
-                    print(code)
-                    switch code {
-                    case let (code) where code == 200:
-                        print("logIn Completo")
-                        print(parseJSON["token"] as! String)
-                        UserDefaults.standard.set(parseJSON["token"] as! String, forKey: "token")
-                        print("HOLAAA")
-                        print(parseJSON)
-                        print("HOLAAA")
-                        if(code == 200){
-                            DispatchQueue.main.async {
-                                let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
-                                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainAPP") as UIViewController
-                                self.present(vc ,animated: true, completion: nil )
-                            }
-                        }
-                        break
-                    case let (code) where code == 400:
-                        print(parseJSON)
-                        print("Please try again")
-                        break
-                    default :
-                        print(parseJSON)
-                        print("Please try again")
-                        break
-                    }
-                }
-            }catch{
-                removeActivityIndicator(activityIndicator: myActivityIndicator)
-                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
-                print(error)
+        let parameters : Parameters = [
+            "userName" : userNameTF.text!,
+            "password" : userPasswordTF.text!
+        ]
+        let headers: HTTPHeaders = [
+            "Authorization": UserDefaults.standard.string(forKey: "token")!,
+            "Accept": "application/json"
+        ]
+        Alamofire.request("http://localhost:8888/APIBUENA/API3/public/Users/login.json", method : .post, parameters : parameters, headers : headers).responseJSON { response in
+            debugPrint(response)
+            if let json = response.result.value {
+                
+                let data = Responses(json: (json as! NSDictionary) as! [String : Any])
+                print(data)
+//                let code = data["code"]
+//                switch code {
+//                    case let (code) where code == 200:
+//                        break
+//                default:
+//                        break
             }
         }
-        task.resume()
+        
+        //Send HTTP Request to Register user
+//        let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Users/login.json")
+//        var request = URLRequest(url:myUrl!)
+//        request.httpMethod = "POST"//compose a query string
+//        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
+//        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
+//
+//        let postString = "userName="+userNameTF.text!+"&password="+userPasswordTF.text!
+//        request.httpBody = postString.data(using: .utf8)
+        
+//        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+//
+//            removeActivityIndicator(activityIndicator: myActivityIndicator)
+//
+//            if error != nil
+//            {
+//                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
+//                print("error=\(String(describing: error))")
+//            }
+//
+//            // RESPONSE sent from a server side code to NSDictionary object:
+//            do{
+//                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+//
+//                if let parseJSON = json {
+//
+//                    let code = parseJSON["code"] as! Int
+//                    print(code)
+//                    switch code {
+//                    case let (code) where code == 200:
+//                        print("logIn Completo")
+//                        print(parseJSON["token"] as! String)
+//                        UserDefaults.standard.set(parseJSON["token"] as! String, forKey: "token")
+//                        print("HOLAAA")
+//                        print(parseJSON)
+//                        print("HOLAAA")
+//                        if(code == 200){
+//                            DispatchQueue.main.async {
+//                                let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
+//                                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainAPP") as UIViewController
+//                                self.present(vc ,animated: true, completion: nil )
+//                            }
+//                        }
+//                        break
+//                    case let (code) where code == 400:
+//                        print(parseJSON)
+//                        print("Please try again")
+//                        break
+//                    default :
+//                        print(parseJSON)
+//                        print("Please try again")
+//                        break
+//                    }
+//                }
+//            }catch{
+//                removeActivityIndicator(activityIndicator: myActivityIndicator)
+//                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
+//                print(error)
+//            }
+//        }
+//        task.resume()
     }
 
     
