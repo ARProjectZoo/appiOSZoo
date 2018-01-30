@@ -68,25 +68,26 @@ class ChangePassViewController: UIViewController {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 
                 if let parseJSON = json {
-                    
-                    let code = parseJSON["code"] as! Int
-                    switch code {
-                    case let (code) where code == 200:
-                        print("contraseña cambiada")
-                        DispatchQueue.main.async {
-                            let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
-                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainAPP") as UIViewController
-                            self.present(vc ,animated: true, completion: nil )
-                        }
-                        //showAlert(message: "Contraseña cambiada")
-                        break
-                    case let (code) where code == 400:
-                        print("Please try again")
-                        break
-                    default :
-                        print("Please try again")
-                        break
-                    }
+                    print(parseJSON)
+                    print(UserDefaults.standard.string(forKey: "token")!)
+//                    let code = parseJSON["code"] as! Int
+//                    switch code {
+//                    case let (code) where code == 200:
+//                        print("contraseña cambiada")
+//                        DispatchQueue.main.async {
+//                            let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
+//                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainAPP") as UIViewController
+//                            self.present(vc ,animated: true, completion: nil )
+//                        }
+//                        //showAlert(message: "Contraseña cambiada")
+//                        break
+//                    case let (code) where code == 400:
+//                        print("Please try again")
+//                        break
+//                    default :
+//                        print("Please try again")
+//                        break
+//                    }
                     
                 }
             }catch{

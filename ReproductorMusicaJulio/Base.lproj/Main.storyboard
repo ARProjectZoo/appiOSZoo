@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pin-dw-obf">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ubg-N6-z9u">
+>>>>>>> f236df6c8ab0946f357ead6c6edd71898bc31202
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -186,7 +190,7 @@
         <!--Login-->
         <scene sceneID="dZE-bO-hXd">
             <objects>
-                <viewController storyboardIdentifier="MainLogIn" id="8NN-sX-7Di" customClass="LoginViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8NN-sX-7Di" customClass="LoginViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vz9-SJ-P3b"/>
                         <viewControllerLayoutGuide type="bottom" id="eyW-OD-aYB"/>
@@ -313,7 +317,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Hb4-UB-cC1">
             <objects>
-                <tabBarController id="Ubg-N6-z9u" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainLogIn" id="Ubg-N6-z9u" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rae-L5-XYS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

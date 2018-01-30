@@ -88,10 +88,12 @@ class ForgotPassViewController: UIViewController {
                     
                     let code = parseJSON["code"] as! Int
                     print(parseJSON)
+                    
                     switch code {
                     case let (code) where code == 200:
                         print("Forget completo")
                         print(parseJSON["token"] as! String)
+                        UserDefaults.standard.set(parseJSON["token"] as! String, forKey: "token")
                         DispatchQueue.main.async {
                             let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
                             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "changePassword") as UIViewController
