@@ -1,22 +1,20 @@
-//
-//  LoginViewController.swift
-//  ReproductorMusicaJulio
-//
-//  Created by alumnos on 16/1/18.
-//  Copyright © 2018 julio. All rights reserved.
-//
+
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class ForgotPassViewController: UIViewController {
 
     @IBOutlet weak var userNameTF: UITextField!
-    @IBOutlet weak var userPasswordTF: UITextField!
+    @IBOutlet weak var userEmailTF: UITextField!
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     var URLprincipal = "http://localhost:8888/APIZOOAR/API%20/fuelphp/public/"
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTF.customAspect()
-        userPasswordTF.customAspect()
+        userEmailTF.customAspect()
     }
     override func viewWillAppear(_ animated: Bool) {
         userNameTF.customAspect()
@@ -25,29 +23,24 @@ class LoginViewController: UIViewController {
         sender.resignFirstResponder()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
-    }
-    @IBAction func forgot(_ sender: UIButton) {
-    }
     
-    @IBAction func login(_ sender: UIButton) {
+    
+    @IBAction func check(_ sender: UIButton) {
         
         let userName = userNameTF.text;
-        let userPassword = userPasswordTF.text;
+        let userEmail = userEmailTF.text;
         let usedNameStored = UserDefaults.standard.string(forKey: "userName");
-        let userPasswordStored = UserDefaults.standard.string(forKey: "userPassword");
-       
+        let userEmailStored = UserDefaults.standard.string(forKey: "userEmail");
         
-        if((userName?.isEmpty)! || (userPassword?.isEmpty)!)
+        
+        if((userName?.isEmpty)! || (userEmail?.isEmpty)!)
         {
             showAlert(message: "All fields are required", view : self )
             return;
         }
         
         if(usedNameStored == userName){
-            if(userPasswordStored == userPassword)
+            if(userEmailStored == userEmail)
             {
                 UserDefaults.standard.set(true, forKey:"isUserLoggedIn");
                 UserDefaults.standard.synchronize();
@@ -55,7 +48,6 @@ class LoginViewController: UIViewController {
                 self.dismiss(animated: true, completion:nil);
             }
         }
-        
         //Create Activity Indicator
         let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         //Position Activity Indicator in the center of the main view
@@ -69,13 +61,13 @@ class LoginViewController: UIViewController {
         view.addSubview(myActivityIndicator)
         
         //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIBUENA/API3/public/Users/login.json")
+        let myUrl = URL(string:"http://localhost:8888/APIBUENA/API3/public/Users/forgotPassword.json")
         var request = URLRequest(url:myUrl!)
         request.httpMethod = "POST"//compose a query string
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
         
-        let postString = "userName="+userNameTF.text!+"&password="+userPasswordTF.text!
+        let postString = "userName="+userNameTF.text!+"&email="+userEmailTF.text!
         request.httpBody = postString.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
@@ -84,29 +76,34 @@ class LoginViewController: UIViewController {
             
             if error != nil
             {
-                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
+//                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
                 print("error=\(String(describing: error))")
             }
             
             // RESPONSE sent from a server side code to NSDictionary object:
             do{
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-
+                
                 if let parseJSON = json {
                     
                     let code = parseJSON["code"] as! Int
+                    print(parseJSON)
+                    
                     switch code {
                     case let (code) where code == 200:
-                        print("logIn Completo")
+                        print("Forget completo")
                         print(parseJSON["token"] as! String)
                         UserDefaults.standard.set(parseJSON["token"] as! String, forKey: "token")
                         DispatchQueue.main.async {
                             let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
-                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainAPP") as UIViewController
+                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "changePassword") as UIViewController
                             self.present(vc ,animated: true, completion: nil )
                         }
                         break
                     case let (code) where code == 400:
+                        print("Please try again")
+                        break
+                    case let (code) where code == 500:
                         print("Please try again")
                         break
                     default :
@@ -116,15 +113,12 @@ class LoginViewController: UIViewController {
                 }
             }catch{
                 removeActivityIndicator(activityIndicator: myActivityIndicator)
-                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
+                
                 print(error)
             }
         }
         task.resume()
     }
+   
 
-    
 }
-
-
-

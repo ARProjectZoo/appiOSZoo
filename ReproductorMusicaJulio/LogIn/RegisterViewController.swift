@@ -127,7 +127,7 @@ class RegisterViewController: UIViewController {
             let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
             
             if let parseJSON = json {
-                print(parseJSON["code"])
+                print(parseJSON["code"]!)
                 let code = parseJSON["code"] as! Int
                     switch code {
                     case let (code) where code == 201:
@@ -135,7 +135,7 @@ class RegisterViewController: UIViewController {
                         self.coding = 201
                         DispatchQueue.main.async {
                             let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
-                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "MainLogIn") as UIViewController
+                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainLogIn") as UIViewController
                             self.present(vc ,animated: true, completion: nil )
                         }
                         break
