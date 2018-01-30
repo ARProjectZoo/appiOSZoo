@@ -17,6 +17,9 @@ class CreateStoryViewController: UIViewController {
     var URLprincipal = "http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/"
     @IBOutlet weak var imageStory: UIImageView!
     @IBOutlet weak var commentTF: UITextField!
+    //camera
+    let imagePicker: UIImagePickerController = UIImagePickerController()
+    @IBOutlet weak var imageProfile: UIImageView!
     
     
     
@@ -95,7 +98,6 @@ class CreateStoryViewController: UIViewController {
             showAlert(message: "Write description", view : self )
             return
         }
-        
         //Create Activity Indicator
         let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         //Position Activity Indicator in the center of the main view
@@ -172,6 +174,69 @@ class CreateStoryViewController: UIViewController {
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    //camera
+    
+    @IBAction func addPhoto(_ sender: Any) {
+      
+        let alertView = UIAlertController(title: "Image", message: "Do you want take photo or choose in your gallery?", preferredStyle: .actionSheet)
+        let gallery = UIAlertAction(title: "Cancel", style: .default) {
+            (action) in self.dismiss(animated: true, completion: nil)
+        }
+        let camera = UIAlertAction(title: "Gallery", style: .default) {
+            (action) in self.selectPhoto()
+        }
+        let cancel = UIAlertAction(title: "Camera", style: .default) {
+            (action) in  self.takePhoto()
+        }
+        alertView.addAction(cancel)
+        alertView.addAction(camera)
+        alertView.addAction(gallery)
+        present(alertView, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    //camera
+    func takePhoto() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            if UIImagePickerController.availableCaptureModes(for: .rear) != nil {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .camera
+                imagePicker.cameraCaptureMode = .photo
+                
+                present(imagePicker, animated: true, completion: nil)
+            }
+        }
+        else
+        {
+            //NO camera
+            print("no hay camera")
+        }
+    }
+    func selectPhoto() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .photoLibrary
+            
+            present(imagePicker, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let selectImage: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageProfile.image = selectImage
+            if imagePicker.sourceType == .camera {
+                UIImageWriteToSavedPhotosAlbum(selectImage, nil, nil, nil)
+            }
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     
 }
 

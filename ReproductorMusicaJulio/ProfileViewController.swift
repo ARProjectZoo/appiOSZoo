@@ -3,6 +3,7 @@
 import UIKit
 import ZAlertView
 import Device
+import AVFoundation
 
 class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIAlertViewDelegate {
     
@@ -10,13 +11,12 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     var isActive = true
     
     //outlets
-    @IBOutlet weak var btnImage: UIButton!
+
     @IBOutlet weak var collection: UICollectionView!
     
     
     //label
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var momentsLabel: UILabel!
     
     
     //layaout
@@ -24,9 +24,12 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var distancetopMobile: NSLayoutConstraint!
     @IBOutlet weak var distanceLabels: NSLayoutConstraint!
     @IBOutlet weak var distanceButtonName: NSLayoutConstraint!
+    @IBOutlet weak var distanceBottom: NSLayoutConstraint!
+
     var myArrayProfile: [UIImage] = [#imageLiteral(resourceName: "fotousuario")]
-    
-   
+    //camara
+    let imagePicker: UIImagePickerController = UIImagePickerController()
+    @IBOutlet weak var imageProfile: UIImageView!
     
     
     
@@ -43,12 +46,14 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.viewDidLoad()
         collection.dataSource = self
         collection.delegate = self
+        imagePicker.delegate = self
+        
         myFunc()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         //Create Activity Indicator
-        let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        /*let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         //Position Activity Indicator in the center of the main view
         myActivityIndicator.center = view.center
         
@@ -83,7 +88,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             // RESPONSE sent from a server side code to NSDictionary object:
             do{
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                //let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 
                 if let parseJSON = json {
                     
@@ -111,7 +116,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
                 print(error)
             }
         }
-        task.resume()
+        task.resume()*/
     }
     
 
@@ -130,13 +135,13 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBAction func btnProfile(_ sender: Any) {
         let alertView = UIAlertController(title: "Image", message: "Do you want take photo or choose in your gallery?", preferredStyle: .actionSheet)
         let gallery = UIAlertAction(title: "Cancel", style: .default) {
-            (action) in self.btnImage.imageView?.image = UIImage()
+            (action) in self.dismiss(animated: true, completion: nil)
         }
         let camera = UIAlertAction(title: "Gallery", style: .default) {
-            (action) in self.btnImage.imageView?.image = UIImage()
+            (action) in self.selectPhoto()
         }
         let cancel = UIAlertAction(title: "Camera", style: .default) {
-            (action) in self.dismiss(animated: true, completion: nil)
+            (action) in  self.takePhoto()
         }
         alertView.addAction(cancel)
         alertView.addAction(camera)
@@ -149,12 +154,14 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
+            //redirecion charge
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let editViewController = storyBoard.instantiateViewController(withIdentifier: "edit")
             self.present(editViewController, animated: true, completion: nil)
         }
         else
         {
+            //redireccion View
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let viewViewController = storyBoard.instantiateViewController(withIdentifier: "view")
             self.present(viewViewController, animated: true, completion: nil)
@@ -166,11 +173,10 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
     
-    
+    //tamaños pantalla
     func myFunc() {
         
         switch Device.size() {
-        //case .screen3_5Inch:  print("It's a 3.5 inch screen")
         case .screen4Inch:
             print("It's a 4 inch screen");
             screen4Inch()
@@ -183,20 +189,17 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         case .screen5_8Inch:
             print("It's a 5.8 inch screen")
             screen5_8Inch()
-        //case .screen7_9Inch:  print("It's a 7.9 inch screen")
-        //case .screen9_7Inch:  print("It's a 9.7 inch screen")
-        //case .screen12_9Inch: print("It's a 12.9 inch screen")
+
         default:
             print("Unknown size")
         }
     }
-    
-    
-
-    //tamaños pantalla
     func screen4Inch () {
         //perfect
-        distanceLabels.constant = 50
+        
+        distanceBottom.constant = 20
+        distanceLabels.constant = 30
+        distanceButtonName.constant = 20
     }
     func screen4_7Inch () {
         //perfect
@@ -207,7 +210,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     func screen5_5Inch (){
         //perfect
-        //momentsLabel.font = UIFont(name: momentsLabel.font.fontName, size: 20)
         distanceLabels.constant = 90
         distancetopMobile.constant = 50
         distanceLabelCollection.constant = 40
@@ -215,8 +217,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     func screen5_8Inch (){
         //perfect
-        //momentsLabel.font = UIFont(name: momentsLabel.font.fontName, size: 20)
-
         distanceLabelCollection.constant = 40
         distanceButtonName.constant = 40
         distanceLabels.constant = 100
@@ -225,84 +225,48 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
         
     
-    /*func getphoto(){
-        //Create Activity Indicator
-        let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        //Position Activity Indicator in the center of the main view
-        myActivityIndicator.center = view.center
-        
-        //If needed, yo can prevent activity Idicantor from hiing ehen stopAnimating() is called
-        myActivityIndicator.hidesWhenStopped = false
-        
-        //Start Activity Indicator
-        myActivityIndicator.startAnimating()
-        view.addSubview(myActivityIndicator)
-        
-        //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIZOOAR/API%20/fuelphp/public/Stories/create.json")
-        var request = URLRequest(url:myUrl!)
-        request.httpMethod = "GET"//compose a query string
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
-        
-        let getString = /*"photo="+imageStory.image!+*/"&comment="+commentTF.text!
-        request.httpBody = getString.data(using: .utf8)
-        
-        let task = URLSession.shared.dataTask(with: request)
-        {
-            (data: Data?, response: URLResponse?, error: Error?) in
-            
-            removeActivityIndicator(activityIndicator: myActivityIndicator)
-            
-            if error != nil
-            {
-                showAlert(message: "Could not successfully perform this request. Please try again later", view : self)
-                
-                print("error=\(String(describing: error))")
-            }
-            
-            // RESPONSE sent from a server side code to NSDictionary object:
-            do{
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-                
-                if let parseJSON = json {
-                    let code = parseJSON["code"] as! Int
-                    switch code {
-                    case let (code) where code == 201:
-                        print("Creado")
-                        showAlert(message: "Registrado", view : self)
-                        break
-                    case let (code) where code == 400:
-                        print("Algun parametro esta vacio")
-                        //showAlert(message: "Please try again")
-                        break
-                    case let (code) where code == 400:
-                        print("Algun parametro esta vacio")
-                        //showAlert(message: "Please try again")
-                        break
-                    case let (code) where code == 500:
-                        print("Error de servidor ")
-                        //showAlert(message: "Please try again")
-                        break
-                    default :
-                        print("Please try again")
-                        //showAlert(message: "Please try again")
-                        break
-                    }
-                }
-            }catch{
-                removeActivityIndicator(activityIndicator: myActivityIndicator)
-                //showAlert(message: "Please try again")
-                print(error)
-            }
-        }
-        task.resume()
-    }*/
-    
     
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
+    //camera
+    func takePhoto() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            if UIImagePickerController.availableCaptureModes(for: .rear) != nil {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .camera
+                imagePicker.cameraCaptureMode = .photo
+                
+                present(imagePicker, animated: true, completion: nil)
+            }
+        }
+        else
+        {
+            //NO camera
+            print("no hay camera")
+        }
+    }
+    func selectPhoto() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .photoLibrary
+
+                present(imagePicker, animated: true, completion: nil)
+
+        }
+    
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let selectImage: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageProfile.image = selectImage
+            if imagePicker.sourceType == .camera {
+                UIImageWriteToSavedPhotosAlbum(selectImage, nil, nil, nil)
+            }
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
     
 }
