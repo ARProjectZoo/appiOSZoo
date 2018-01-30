@@ -12,16 +12,18 @@ class CreateStoryViewController: UIViewController {
     @IBOutlet weak var distanceTFButton: NSLayoutConstraint!
     //botones
     @IBOutlet weak var buttonSave: UIButton!
+    @IBOutlet weak var back: UIButton!
     //peticiones
-    var URLprincipal = "http://localhost:8888/APIZOOAR/API%20/fuelphp/public/"
+    var URLprincipal = "http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/"
     @IBOutlet weak var imageStory: UIImageView!
     @IBOutlet weak var commentTF: UITextField!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonSave.layer.cornerRadius = 10
-        
+        imageStory.image = #imageLiteral(resourceName: "Fondo")
     }
 
     
@@ -107,13 +109,13 @@ class CreateStoryViewController: UIViewController {
         view.addSubview(myActivityIndicator)
         
         //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIZOOAR/API%20/fuelphp/public/Stories/create.json")
+        let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Stories/create.json")
         var request = URLRequest(url:myUrl!)
         request.httpMethod = "POST"//compose a query string
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
         
-        let postString = /*"photo="+imageStory.image!+*/"&comment="+commentTF.text!
+        let postString = /*"photo="+imageStory.textInputMode!+*/"&comment="+commentTF.text!+"&date="
         request.httpBody = postString.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request)
@@ -166,8 +168,13 @@ class CreateStoryViewController: UIViewController {
         }
         task.resume()
     }
-        
+    
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
+
     
     
     

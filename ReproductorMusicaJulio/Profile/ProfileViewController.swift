@@ -24,6 +24,11 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var distancetopMobile: NSLayoutConstraint!
     @IBOutlet weak var distanceLabels: NSLayoutConstraint!
     @IBOutlet weak var distanceButtonName: NSLayoutConstraint!
+    var myArrayProfile: [UIImage] = [#imageLiteral(resourceName: "fotousuario")]
+    
+   
+    
+    
     
     //popup
     let dialog = ZAlertView()
@@ -41,7 +46,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         myFunc()
     }
 
-    /*override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         //Create Activity Indicator
         let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         //Position Activity Indicator in the center of the main view
@@ -55,7 +60,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         view.addSubview(myActivityIndicator)
         
         //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIZOOAR/API%20/fuelphp/public/Users/show.json")
+        let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Users/show.json")
         var request = URLRequest(url:myUrl!)
         request.httpMethod = "GET"//compose a query string
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
@@ -92,6 +97,9 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
                     case let (code) where code == 400:
                         print("Please try again")
                         break
+                    case let (code) where code == 500:
+                        print("Error del servidor")
+                        break
                     default :
                         print("Please try again")
                         break
@@ -104,7 +112,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             }
         }
         task.resume()
-    }*/
+    }
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -215,13 +223,86 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         distancetopMobile.constant = 50
 
     }
+        
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        _ = segue.destination as! CreateStoryViewController
+    /*func getphoto(){
+        //Create Activity Indicator
+        let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        //Position Activity Indicator in the center of the main view
+        myActivityIndicator.center = view.center
+        
+        //If needed, yo can prevent activity Idicantor from hiing ehen stopAnimating() is called
+        myActivityIndicator.hidesWhenStopped = false
+        
+        //Start Activity Indicator
+        myActivityIndicator.startAnimating()
+        view.addSubview(myActivityIndicator)
+        
+        //Send HTTP Request to Register user
+        let myUrl = URL(string:"http://localhost:8888/APIZOOAR/API%20/fuelphp/public/Stories/create.json")
+        var request = URLRequest(url:myUrl!)
+        request.httpMethod = "GET"//compose a query string
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
+        
+        let getString = /*"photo="+imageStory.image!+*/"&comment="+commentTF.text!
+        request.httpBody = getString.data(using: .utf8)
+        
+        let task = URLSession.shared.dataTask(with: request)
+        {
+            (data: Data?, response: URLResponse?, error: Error?) in
+            
+            removeActivityIndicator(activityIndicator: myActivityIndicator)
+            
+            if error != nil
+            {
+                showAlert(message: "Could not successfully perform this request. Please try again later", view : self)
+                
+                print("error=\(String(describing: error))")
+            }
+            
+            // RESPONSE sent from a server side code to NSDictionary object:
+            do{
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                if let parseJSON = json {
+                    let code = parseJSON["code"] as! Int
+                    switch code {
+                    case let (code) where code == 201:
+                        print("Creado")
+                        showAlert(message: "Registrado", view : self)
+                        break
+                    case let (code) where code == 400:
+                        print("Algun parametro esta vacio")
+                        //showAlert(message: "Please try again")
+                        break
+                    case let (code) where code == 400:
+                        print("Algun parametro esta vacio")
+                        //showAlert(message: "Please try again")
+                        break
+                    case let (code) where code == 500:
+                        print("Error de servidor ")
+                        //showAlert(message: "Please try again")
+                        break
+                    default :
+                        print("Please try again")
+                        //showAlert(message: "Please try again")
+                        break
+                    }
+                }
+            }catch{
+                removeActivityIndicator(activityIndicator: myActivityIndicator)
+                //showAlert(message: "Please try again")
+                print(error)
+            }
+        }
+        task.resume()
+    }*/
+    
+    
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    
-    
-    
     
     
 }

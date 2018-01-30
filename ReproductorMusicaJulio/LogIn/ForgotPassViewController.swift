@@ -61,7 +61,7 @@ class ForgotPassViewController: UIViewController {
         view.addSubview(myActivityIndicator)
         
         //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIBUENA/API3/public/Users/forgotPassword.json")
+        let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Users/forgotPassword.json")
         var request = URLRequest(url:myUrl!)
         request.httpMethod = "POST"//compose a query string
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
