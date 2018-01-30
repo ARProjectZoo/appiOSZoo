@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pin-dw-obf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vRQ-CD-NdE">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -332,7 +332,7 @@
         <!--ForgotPass Scene-->
         <scene sceneID="dnb-Xn-rk9">
             <objects>
-                <viewController title="ForgotPass Scene" id="DN8-J5-6Sq" customClass="ForgotPass1PagViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ForgotPass Scene" id="DN8-J5-6Sq" customClass="ForgotPassViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2ew-89-XKa"/>
                         <viewControllerLayoutGuide type="bottom" id="j4t-et-PwE"/>
@@ -360,9 +360,6 @@
                                 </state>
                                 <connections>
                                     <action selector="check:" destination="DN8-J5-6Sq" eventType="touchUpInside" id="vuW-cX-3kb"/>
-                                    <action selector="login:" destination="DN8-J5-6Sq" eventType="touchUpInside" id="CiE-xq-gsA"/>
-                                    <action selector="sendToNewPass:" destination="DN8-J5-6Sq" eventType="touchUpInside" id="ri2-tI-T1B"/>
-                                    <segue destination="6al-Qt-iU4" kind="show" id="osW-S2-b6U"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-gM-9gr">
@@ -474,7 +471,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo2" translatesAutoresizingMaskIntoConstraints="NO" id="52f-tt-KLZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omL-zM-pTw">
                                 <rect key="frame" x="94.666666666666686" y="60" width="185" height="185"/>
@@ -563,6 +560,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="Rzb-VW-ZdP" colorLabel="IBBuiltInLabel-Green"/>
+                    <navigationItem key="navigationItem" id="y3q-qd-hag"/>
                     <connections>
                         <outlet property="MomentsLabel" destination="eID-gN-J3O" id="Ouq-a3-xiM"/>
                         <outlet property="btnImage" destination="omL-zM-pTw" id="LGD-GF-nIV"/>
@@ -607,7 +605,7 @@
                                 <rect key="frame" x="20" y="145" width="335" height="342"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pe-cf-H4X">
-                                <rect key="frame" x="137.66666666666666" y="717" width="100" height="30"/>
+                                <rect key="frame" x="138" y="717" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.082038270601725014" green="0.3616552982233503" blue="0.14555440534155051" alpha="0.83807791095890416" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="npp-aR-Dr5"/>
@@ -641,7 +639,7 @@
                                     <color key="titleColor" red="0.28146247943446251" green="0.57818448604060912" blue="0.3364905722349939" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pin-dw-obf" kind="show" id="Pt2-Jk-pQs"/>
+                                    <action selector="back:" destination="1c0-9S-chx" eventType="touchUpInside" id="mCp-C5-m73"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -675,6 +673,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="back" destination="S3A-XZ-ucM" id="UpW-5N-bOw"/>
                         <outlet property="buttonSave" destination="2pe-cf-H4X" id="xKr-zJ-oPe"/>
                         <outlet property="commentTF" destination="cAH-nA-Sd8" id="cYU-sI-oAX"/>
                         <outlet property="distanceButtonBottom" destination="63o-ud-pGS" id="0Zk-kp-Bfh"/>
@@ -687,7 +686,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVo-en-byF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4988" y="-250"/>
+            <point key="canvasLocation" x="4482" y="-116"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="K6a-lC-ekH">
@@ -748,7 +747,7 @@
         <!--NewPass Scene-->
         <scene sceneID="KIm-sf-x3p">
             <objects>
-                <viewController title="NewPass Scene" id="6al-Qt-iU4" customClass="ForgotPassViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="changePassword" title="NewPass Scene" id="6al-Qt-iU4" customClass="ChangePassViewController" customModule="ReproductorMusicaJulio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YTX-NX-HFS"/>
                         <viewControllerLayoutGuide type="bottom" id="A4Q-Nx-Q4F"/>
@@ -775,9 +774,7 @@
                                     <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="login:" destination="6al-Qt-iU4" eventType="touchUpInside" id="ETn-I7-INr"/>
-                                    <action selector="sendToForgot:" destination="6al-Qt-iU4" eventType="touchUpInside" id="zgO-RC-pw3"/>
-                                    <action selector="sendToLogin:" destination="6al-Qt-iU4" eventType="touchUpInside" id="ioH-Vl-EJu"/>
+                                    <action selector="sendToForgot:" destination="6al-Qt-iU4" eventType="touchUpInside" id="ogU-g5-UKE"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bpw-Jz-xbO">
@@ -851,8 +848,6 @@
                     <connections>
                         <outlet property="newPasswordTF" destination="fNV-6N-TRU" id="pos-Gc-nk6"/>
                         <outlet property="repeatNewPasswordTF" destination="95h-Xa-taN" id="1Ji-Qd-wP9"/>
-                        <outlet property="userEmailTF" destination="fNV-6N-TRU" id="AuD-7G-RLZ"/>
-                        <outlet property="userPasswordTF" destination="95h-Xa-taN" id="ye3-Mb-caa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yuj-SJ-lHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -872,7 +867,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="view" image="Fondo-1" translatesAutoresizingMaskIntoConstraints="NO" id="p72-Sr-Ehi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7r7-eF-n3X">
                                 <rect key="frame" x="152" y="69" width="71" height="36"/>
@@ -921,7 +916,7 @@
                                     <color key="titleColor" red="0.28657635870198583" green="0.57818448604060912" blue="0.34084997121467436" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pin-dw-obf" kind="show" id="ArI-AM-OTd"/>
+                                    <action selector="back:" destination="pP6-2C-IJf" eventType="touchUpInside" id="aHM-S4-MNh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -965,8 +960,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6D-vN-vae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pP6-2C-IJf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4988" y="556"/>
+            <point key="canvasLocation" x="4482" y="584"/>
         </scene>
     </scenes>
     <resources>
@@ -980,7 +976,4 @@
         <image name="unnamedverdeclaro" width="210" height="210"/>
         <image name="zooLogo" width="425" height="425"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ArI-AM-OTd"/>
-    </inferredMetricsTieBreakers>
 </document>
