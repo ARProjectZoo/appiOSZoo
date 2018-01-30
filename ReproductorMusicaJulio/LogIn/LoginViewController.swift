@@ -1,20 +1,22 @@
-
+//
+//  LoginViewController.swift
+//  ReproductorMusicaJulio
+//
+//  Created by alumnos on 16/1/18.
+//  Copyright © 2018 julio. All rights reserved.
+//
 
 import UIKit
 
-class ForgotPassViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var userNameTF: UITextField!
-    @IBOutlet weak var userEmailTF: UITextField!
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    @IBOutlet weak var userPasswordTF: UITextField!
     var URLprincipal = "http://localhost:8888/APIZOOAR/API%20/fuelphp/public/"
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTF.customAspect()
-        userEmailTF.customAspect()
+        userPasswordTF.customAspect()
     }
     override func viewWillAppear(_ animated: Bool) {
         userNameTF.customAspect()
@@ -23,24 +25,29 @@ class ForgotPassViewController: UIViewController {
         sender.resignFirstResponder()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+
+    }
+    @IBAction func forgot(_ sender: UIButton) {
+    }
     
-    
-    @IBAction func check(_ sender: UIButton) {
+    @IBAction func login(_ sender: UIButton) {
         
         let userName = userNameTF.text;
-        let userEmail = userEmailTF.text;
+        let userPassword = userPasswordTF.text;
         let usedNameStored = UserDefaults.standard.string(forKey: "userName");
-        let userEmailStored = UserDefaults.standard.string(forKey: "userEmail");
+        let userPasswordStored = UserDefaults.standard.string(forKey: "userPassword");
+       
         
-        
-        if((userName?.isEmpty)! || (userEmail?.isEmpty)!)
+        if((userName?.isEmpty)! || (userPassword?.isEmpty)!)
         {
             showAlert(message: "All fields are required", view : self )
             return;
         }
         
         if(usedNameStored == userName){
-            if(userEmailStored == userEmail)
+            if(userPasswordStored == userPassword)
             {
                 UserDefaults.standard.set(true, forKey:"isUserLoggedIn");
                 UserDefaults.standard.synchronize();
@@ -48,6 +55,7 @@ class ForgotPassViewController: UIViewController {
                 self.dismiss(animated: true, completion:nil);
             }
         }
+        
         //Create Activity Indicator
         let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         //Position Activity Indicator in the center of the main view
@@ -61,13 +69,13 @@ class ForgotPassViewController: UIViewController {
         view.addSubview(myActivityIndicator)
         
         //Send HTTP Request to Register user
-        let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Users/forgotPassword.json")
+        let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Users/login.json")
         var request = URLRequest(url:myUrl!)
         request.httpMethod = "POST"//compose a query string
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
         
-        let postString = "userName="+userNameTF.text!+"&email="+userEmailTF.text!
+        let postString = "userName="+userNameTF.text!+"&password="+userPasswordTF.text!
         request.httpBody = postString.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
@@ -76,47 +84,55 @@ class ForgotPassViewController: UIViewController {
             
             if error != nil
             {
-//                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
+                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
                 print("error=\(String(describing: error))")
             }
             
             // RESPONSE sent from a server side code to NSDictionary object:
             do{
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-                
+
                 if let parseJSON = json {
                     
                     let code = parseJSON["code"] as! Int
-                    print(parseJSON)
+                    print(code)
                     switch code {
                     case let (code) where code == 200:
-                        print("Forget completo")
+                        print("logIn Completo")
                         print(parseJSON["token"] as! String)
-                        DispatchQueue.main.async {
-                            let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
-                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "changePassword") as UIViewController
-                            self.present(vc ,animated: true, completion: nil )
+                        UserDefaults.standard.set(parseJSON["token"] as! String, forKey: "token")
+                        print("HOLAAA")
+                        print(parseJSON)
+                        print("HOLAAA")
+                        if(code == 200){
+                            DispatchQueue.main.async {
+                                let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
+                                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainAPP") as UIViewController
+                                self.present(vc ,animated: true, completion: nil )
+                            }
                         }
                         break
                     case let (code) where code == 400:
-                        print("Please try again")
-                        break
-                    case let (code) where code == 500:
+                        print(parseJSON)
                         print("Please try again")
                         break
                     default :
+                        print(parseJSON)
                         print("Please try again")
                         break
                     }
                 }
             }catch{
                 removeActivityIndicator(activityIndicator: myActivityIndicator)
-                
+                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
                 print(error)
             }
         }
         task.resume()
     }
-   
 
+    
 }
+
+
+
