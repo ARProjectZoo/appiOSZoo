@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var userNameTF: UITextField!
@@ -67,6 +67,9 @@ class LoginViewController: UIViewController {
         //Start Activity Indicator
         myActivityIndicator.startAnimating()
         view.addSubview(myActivityIndicator)
+        
+        //ALAMOFIRE REQUEST
+        
         
         //Send HTTP Request to Register user
         let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Users/login.json")

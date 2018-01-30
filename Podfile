@@ -9,5 +9,5 @@ target 'ReproductorMusicaJulio' do
   
   pod 'ZAlertView'
   pod "Device", '~> 3.0.3'
-  
+  pod 'Alamofire', '~> 4.5'
 end

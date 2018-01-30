@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '73320D32EC00400D034FEADD324006F6'
+               BlueprintIdentifier = '1755B7F6F74E9C50E331FF909F6FD418'
                BlueprintName = 'Pods-ReproductorMusicaJulio'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-ReproductorMusicaJulio.framework'>
