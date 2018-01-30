@@ -12,7 +12,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     //outlets
     @IBOutlet weak var btnImage: UIButton!
     @IBOutlet weak var collection: UICollectionView!
-    @IBOutlet weak var addStoryButton: UIButton!
+    
     
     //label
     @IBOutlet weak var nameLabel: UILabel!
