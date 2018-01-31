@@ -5,6 +5,7 @@ import ZAlertView
 import Device
 import AVFoundation
 
+
 class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIAlertViewDelegate {
     
     //variables
@@ -26,7 +27,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var distanceButtonName: NSLayoutConstraint!
     @IBOutlet weak var distanceBottom: NSLayoutConstraint!
 
-    var myArrayProfile: [UIImage] = [#imageLiteral(resourceName: "fotousuario"),]
+    var myArrayProfile: [UIImage] = [#imageLiteral(resourceName: "fotousuario")]
     //camara
     let imagePicker: UIImagePickerController = UIImagePickerController()
     @IBOutlet weak var imageProfile: UIImageView!
@@ -51,6 +52,9 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         myFunc()
     }
 
+    
+    
+    
     //esto es para el nombre
     override func viewWillAppear(_ animated: Bool) {
         //Create Activity Indicator
@@ -119,6 +123,9 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         task.resume()
     }
+    
+    
+    
     
     //imagenes del cell
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -275,6 +282,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             imageProfile.image = selectImage
             if imagePicker.sourceType == .camera {
                 UIImageWriteToSavedPhotosAlbum(selectImage, nil, nil, nil)
+                
             }
         }
         imagePicker.dismiss(animated: true, completion: nil)
