@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var distanceButtonName: NSLayoutConstraint!
     @IBOutlet weak var distanceBottom: NSLayoutConstraint!
 
-    var myArrayProfile: [UIImage] = [#imageLiteral(resourceName: "fotousuario")]
+    var myArrayProfile: [UIImage] = [#imageLiteral(resourceName: "fotousuario"),]
     //camara
     let imagePicker: UIImagePickerController = UIImagePickerController()
     @IBOutlet weak var imageProfile: UIImageView!
@@ -51,9 +51,10 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         myFunc()
     }
 
+    //esto es para el nombre
     override func viewWillAppear(_ animated: Bool) {
         //Create Activity Indicator
-        /*let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         //Position Activity Indicator in the center of the main view
         myActivityIndicator.center = view.center
         
@@ -88,7 +89,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             // RESPONSE sent from a server side code to NSDictionary object:
             do{
-                //let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 
                 if let parseJSON = json {
                     
@@ -116,10 +117,10 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
                 print(error)
             }
         }
-        task.resume()*/
+        task.resume()
     }
     
-
+    //imagenes del cell
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return myArrayProfile.count
     }
@@ -132,6 +133,12 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     
+    
+    
+    
+    
+    
+    //boton foto
     @IBAction func btnProfile(_ sender: Any) {
         let alertView = UIAlertController(title: "Image", message: "Do you want take photo or choose in your gallery?", preferredStyle: .actionSheet)
         let gallery = UIAlertAction(title: "Cancel", style: .default) {
@@ -168,9 +175,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
     }
-    
-    
-    
     
     
     //tamaños pantalla
@@ -245,6 +249,13 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         {
             //NO camera
             print("no hay camera")
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .photoLibrary
+                
+                present(imagePicker, animated: true, completion: nil)
+                
+            }
         }
     }
     func selectPhoto() {

@@ -19,7 +19,7 @@ class CreateStoryViewController: UIViewController {
     @IBOutlet weak var commentTF: UITextField!
     //camera
     let imagePicker: UIImagePickerController = UIImagePickerController()
-    @IBOutlet weak var imageProfile: UIImageView!
+
     
     
     
@@ -213,6 +213,13 @@ class CreateStoryViewController: UIViewController {
         {
             //NO camera
             print("no hay camera")
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .photoLibrary
+                
+                present(imagePicker, animated: true, completion: nil)
+                
+            }
         }
     }
     func selectPhoto() {
@@ -229,7 +236,7 @@ class CreateStoryViewController: UIViewController {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let selectImage: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageProfile.image = selectImage
+            imageStory.image = selectImage
             if imagePicker.sourceType == .camera {
                 UIImageWriteToSavedPhotosAlbum(selectImage, nil, nil, nil)
             }
