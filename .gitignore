@@ -51,7 +51,7 @@ playground.xcworkspace
 .build/
 
 # CocoaPods - Refactored to standalone file
-.lock
+
 # Carthage - Refactored to standalone file
 
 # fastlane
